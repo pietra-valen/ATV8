@@ -1,0 +1,27 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	
+		real download_mb
+		real velocidade_link
+		real tempo_download
+
+		escreva("Digite um tamanho de um arquivo para download (em MB): ")
+		leia(download_mb)
+
+		escreva("Digite a velocidade de um link de Internet (em Mbps): ")
+		leia(velocidade_link)
+
+		velocidade_link = velocidade_link / 8
+		tempo_download = (download_mb / velocidade_link) / 60
+
+		se(tempo_download <= 0){
+			escreva("O arquivo ira demorar menos de um minuto para baixar")}
+			
+		senao{
+		escreva("Este download do arquivo ira demorar " , tempo_download , " minutos")}
+
+	}
+}
